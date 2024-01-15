@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Account</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Fresh Tomatoes</h1>
+<nav>
+<a href="/">Home</a>
+<a href="/product-details">Products</a>
+<a href="/checkout">Checkout</a>
+<a href="/user-registration">Register</a>
+<a href="/user-account">Account</a>
+</nav>
+</header>
+
+<main>
+<section class="user-account">
+<h1>User Account</h1>
+<p>Welcome, {{ user.name }}!</p>
+<ul>
+<li>Name: {{ user.name }}</li>
+<li>Email: {{ user.email }}</li>
+</ul>
+<a href="/user-account/edit">Edit Account</a>
+<a href="/user-account/orders">View Orders</a>
+</section>
+</main>
+
+<footer>
+<p>Copyright © 2023 Fresh Tomatoes</p>
+</footer>
+</body>
+</html>
+
