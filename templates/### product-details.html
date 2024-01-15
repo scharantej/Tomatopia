@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ tomato.name }}</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>Fresh Tomatoes</h1>
+<nav>
+<a href="/">Home</a>
+<a href="/product-details">Products</a>
+<a href="/checkout">Checkout</a>
+<a href="/user-registration">Register</a>
+<a href="/user-account">Account</a>
+</nav>
+</header>
+
+<main>
+<section class="product-details">
+<div class="product-image">
+<img src="{{ tomato.image_url }}" alt="{{ tomato.name }}">
+</div>
+<div class="product-info">
+<h1>{{ tomato.name }}</h1>
+<p>{{ tomato.description }}</p>
+<ul>
+<li>Taste Profile: {{ tomato.taste_profile }}</li>
+<li>Nutritional Value: {{ tomato.nutritional_value }}</li>
+<li>Culinary Uses: {{ tomato.culinary_uses }}</li>
+</ul>
+<form action="/add-to-cart" method="post">
+<input type="hidden" name="product_id" value="{{ tomato.id }}">
+<input type="number" name="quantity" min="1" value="1">
+<button type="submit">Add to Cart</button>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<p>Copyright © 2023 Fresh Tomatoes</p>
+</footer>
+</body>
+</html>
+
+
